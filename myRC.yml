@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: myjavaapp-rc #rc name
 spec:
-  replicas: 2 #how many pods you want (we are doing this with the help of RC)
+  replicas: 5 #how many pods you want (we are doing this with the help of RC)
   selector:
     app: myjavaapp               #pod label name and selector label name should be matched.
   template:               #below template, the info belongs to pod
