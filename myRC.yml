@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: RepilicationController
+metadata:
+  name: mynginx-rc #rc name
+spec:
+  replicas: 2 #how many pods you want (we are doing this with the help of RC)
+  selector:
+    app: mynginx               #pod label name and selector label name should be matched.
+  template:               #below template, the info belongs to pod
+    metadata:
+      labels:
+        app: mynginx           #It should match so that the RC will know which pods' repica to be created.
+    spec:
+      containers:                #under the pod, we are creating our container
+      - name: nginxcontainer
+        image: nginx
+        ports:
+        - containerPort: 80
