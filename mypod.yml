@@ -1,0 +1,11 @@
+#Manifest file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod #pod label
+spec:             #above specs, the info belongs to the pod, and below spec, belongs to container.
+  containers:
+    - name: first-container
+      image: nginx
+      ports:
+        - containerPort: 80
