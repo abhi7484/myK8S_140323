@@ -4,7 +4,7 @@ metadata:          #name and label of service
   name: abhi-svc
   labels:
     app:  myjavaapp
-    version: 2.6.1    #version labeling or number labeling
+    version: 2.6.2    #version labeling or number labeling
 spec:
   type: NodePort
   ports:
@@ -13,5 +13,5 @@ spec:
     protocol: TCP
   selector:
     app: mahajavaapp
-    version: 2.6.1      #version labeling or number labeling
+    version: 2.6.2      #version labeling or number labeling
 

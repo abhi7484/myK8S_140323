@@ -6,15 +6,15 @@ spec:
   replicas: 5 #how many pods you want (we are doing this with the help of RC)
   selector:
     app: myjavaapp               #pod label name and selector label name should be matched.
-    version: 2.6.1               #version labeling or number labeling
+    version: 2.6.2               #version labeling or number labeling
   template:               #below template, the info belongs to pod
     metadata:
       labels:
         app: myjavaapp           #It should match so that the RC will know which pods' repica to be created.
-        version: 2.6.1           #version labeling or number labeling    
+        version: 2.6.2           #version labeling or number labeling    
     spec:
       containers:                #under the pod, we are creating our container
       - name: myjavaapp
-        image: maha4iac/mahalogin:1
+        image: maha4iac/mahalogin:2
         ports:
         - containerPort: 80
